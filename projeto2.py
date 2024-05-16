@@ -15,10 +15,14 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # URL do arquivo CSV no GitHub (com espaços substituídos por +)
-base_url = 'https://raw.githubusercontent.com/Henitz/projeto2/master/'
-file_name = 'Dados Históricos - Petróleo Brent Futuros (8).csv'
-encoded_file_name = quote_plus(file_name)
-csv_url = f'{base_url}{encoded_file_name}'
+# base_url = 'https://raw.githubusercontent.com/Henitz/projeto2/master/'
+# file_name = 'Dados Históricos - Petróleo Brent Futuros (8).csv'
+# encoded_file_name = quote_plus(file_name)
+# csv_url = f'{base_url}{encoded_file_name}'
+
+
+# URL bruta do arquivo CSV no GitHub
+csv_url = 'https://raw.githubusercontent.com/Henitz/projeto2/master/Dados%20Hist%C3%B3ricos%20-%20Petr%C3%B3leo%20Brent%20Futuros%20(8).csv'
 
 
 # Carregar dados do Brent
