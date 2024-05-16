@@ -38,6 +38,7 @@ feriados_uk = pd.DataFrame({
     'upper_window': 1,
 })
 
+
 # Função para prever usando Prophet
 def prevendo(df, data, flag):
     m = Prophet(holidays=feriados_uk)
@@ -53,8 +54,9 @@ def prevendo(df, data, flag):
     else:
         return m, forecast
 
+
 # Interface com Streamlit
-st.title("Previsão de Preços do Petróleo Brent")
+st.title("Previsão de Preços do Petróleo Brent - 16/05/2024 a 16/05/2025")
 
 data_selecionada = st.date_input("Selecione uma data")
 
