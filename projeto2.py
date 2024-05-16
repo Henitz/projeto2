@@ -1,4 +1,5 @@
 from pipes import quote
+from urllib.parse import quote_plus
 
 import pandas as pd
 import numpy as np
@@ -13,11 +14,12 @@ import warnings
 # Ignorar os FutureWarnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-# URL do arquivo CSV no GitHub (com espaços substituídos por %20)
+# URL do arquivo CSV no GitHub (com espaços substituídos por +)
 base_url = 'https://raw.githubusercontent.com/Henitz/projeto2/master/'
 file_name = 'Dados Históricos - Petróleo Brent Futuros (8).csv'
-encoded_file_name = quote(file_name)
+encoded_file_name = quote_plus(file_name)
 csv_url = f'{base_url}{encoded_file_name}'
+
 
 # Carregar dados do Brent
 df = pd.read_csv(csv_url)
