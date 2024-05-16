@@ -12,7 +12,8 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # URL do arquivo CSV no GitHub
-csv_url = 'https://raw.githubusercontent.com/Henitz/projeto2/master/Dados Históricos - Petróleo Brent Futuros (8).csv'
+# URL do arquivo CSV no GitHub (com espaços substituídos por %20)
+csv_url = 'https://raw.githubusercontent.com/Henitz/projeto2/master/Dados%20Hist%C3%B3ricos%20-%20Petr%C3%B3leo%20Brent%20Futuros%20(8).csv'
 
 # Carregar dados do Brent
 df = pd.read_csv(csv_url)
