@@ -13,7 +13,7 @@ import warnings
 # Ignorar os FutureWarnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-# URL do arquivo CSV no GitHub
+# URL do arquivo CSV no GitHub (com espaços substituídos por %20)
 base_url = 'https://raw.githubusercontent.com/Henitz/projeto2/master/'
 file_name = 'Dados Históricos - Petróleo Brent Futuros (8).csv'
 encoded_file_name = quote(file_name)
