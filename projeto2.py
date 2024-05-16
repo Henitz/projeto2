@@ -11,8 +11,14 @@ import warnings
 # Ignorar os FutureWarnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
+# URL do arquivo CSV no GitHub
+csv_url = 'https://raw.githubusercontent.com/Henitz/projeto2/master/Dados Históricos - Petróleo Brent Futuros (8).csv'
+
 # Carregar dados do Brent
-df = pd.read_csv('Dados Históricos - Petróleo Brent Futuros (8).csv')
+df = pd.read_csv(csv_url)
+
+# Carregar dados do Brent
+# df = pd.read_csv('Dados Históricos - Petróleo Brent Futuros (8).csv')
 
 # Renomear colunas
 df = df.rename(columns={'Data': 'ds', 'Último': 'y'})
